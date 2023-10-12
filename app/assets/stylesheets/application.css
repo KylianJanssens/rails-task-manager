@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Optionally set a minimum height to center vertically */
+}
+
+.index-form {
+  background-color: rgb(229, 229, 229);
+  border-style: solid 1px;
+  padding: 10px;
+}
