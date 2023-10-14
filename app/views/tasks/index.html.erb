@@ -1,15 +1,19 @@
-<h1> My tasks</h1>
-<div class="index-form">
-  <ul>
-    <% @tasks.each do |task| %>
-      <li>
-        <input type="checkbox" <% if task.completed %>checked<% end %>> <%= link_to task.title, task_path(task) %>
-      </li>
-    <% end %>
-  </ul>
+<h1> My Task List</h1>
+<div class="bg-body-secondary border rounded p-4 my-3">
+  <div>
+    <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <input type="checkbox" <% if task.completed %>checked<% end %>> <%= link_to task.title, task_path(task) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  
+    <div class="btn btn-primary">
+      <%= link_to new_task_path do %>
+        <i class="fa-solid fa-plus"></i>
+        Create a new task
+      <% end %>
+    </div>
 </div>
-
-<%= link_to new_task_path do %>
-  <i class="fa-solid fa-plus"></i>
-  Create a new task
-<% end %>
